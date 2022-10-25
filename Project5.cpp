@@ -76,27 +76,30 @@ void print(string weather_station, double temperatures[], int wind_speeds[], str
     cout << "Print all data or most recent? (All/Recent): ";
     string userInput;
     cin >> userInput;
-    while (userInput != "All" && userInput != "Last") {
+    while (userInput != "All" && userInput != "Recent") {
         cout << "Invalid input. Try again: ";
         cin >> userInput;
     }
     if (userInput == "All") {
+        const int COLUMN_WIDTH = 22;
+        cout << endl;
+        cout << "The " << weather_station << " Weather Station" << endl;
+        cout << setw(COLUMN_WIDTH) << left << fixed << setprecision(1) << "Temperature (°C)";
+        cout << setw(COLUMN_WIDTH) << "Wind Speed (mph)";
+        cout << setw(COLUMN_WIDTH) << "Wind Direction" << endl;
         for (int i = 0; i < MAX_READINGS; i++) {
-            if (wind_directions[i] == "") {
+            if (wind_directions[i] == "") { // Ensure there are valid readings to print
                 continue;
             }
-            // Print the formatted data.
-            cout << endl;
-            cout << "The " << weather_station << " Weather Station" << endl;
-            cout << "Temperature: " << showpoint << fixed << setprecision(1) << temperatures[i] << endl;
-            cout << "Wind Speed: " << wind_speeds[i];
-            cout << "\tDirection: " << wind_directions[i] << endl;
+            cout << setw(COLUMN_WIDTH) << temperatures[i];
+            cout << setw(COLUMN_WIDTH) << wind_speeds[i];
+            cout << setw(COLUMN_WIDTH) << wind_directions[i] << endl;
         }
     } else {
         // Print the formatted data.
         cout << "The " << weather_station << " Weather Station" << endl;
-        cout << "Temperature: " << showpoint << fixed << setprecision(1) << temperatures[0] << endl;
-        cout << "Wind Speed: " << wind_speeds[0];
+        cout << "Temperature: " << showpoint << fixed << setprecision(1) << temperatures[0] << " °C" << endl;
+        cout << "Wind Speed: " << wind_speeds[0] << " mph";
         cout << "\tDirection: " << wind_directions[0] << endl;
     }
 }
