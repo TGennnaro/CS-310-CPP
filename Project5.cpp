@@ -58,7 +58,7 @@ void input(double temperatures[], int wind_speeds[], string wind_directions[]) {
     cin.ignore(1000, '\n');
     getline(cin, wind_direction);
     // Verify wind direction
-    while(wind_direction == "") {
+    while (wind_direction == "") {
         cout << "Invalid input. Try again: ";
         getline(cin, wind_direction);
     }
@@ -96,6 +96,7 @@ void print(string weather_station, double temperatures[], int wind_speeds[], str
             cout << setw(COLUMN_WIDTH) << wind_directions[i] << endl;
         }
     } else {
+        cout << endl;
         // Print the formatted data.
         cout << "The " << weather_station << " Weather Station" << endl;
         cout << "Temperature: " << showpoint << fixed << setprecision(1) << temperatures[0] << " °C" << endl;
