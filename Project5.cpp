@@ -130,7 +130,6 @@ void showMenu(string weather_station, double temperatures[], int wind_speeds[], 
         }
     } else {
         cout << "Invalid input. Try again." << endl;
-        showMenu(weather_station, temperatures, wind_speeds, wind_directions, initialized);
     }
 }
 
