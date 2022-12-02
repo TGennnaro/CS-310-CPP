@@ -24,5 +24,5 @@ double Point::getY() {
 }
 
 void Point::print() {
-    cout << "[object Point] at (" << x << ", " << y << ")" << endl;
+    cout << "[Point] at (" << x << ", " << y << ")";
 }

@@ -91,9 +91,11 @@ void print(string weather_station, Reading readings[], int totalReadings, int in
         cout << endl;
         // Print the formatted data.
         cout << "The " << weather_station << " Weather Station" << endl;
-        cout << "Temperature: " << showpoint << fixed << setprecision(1) << readings[inputCounter - 1].temperature << " °C" << endl;
+        cout << "Temperature: " << showpoint << fixed << setprecision(1)
+        << readings[inputCounter - 1].temperature << " °C" << endl;
         cout << "Wind Speed: " << readings[inputCounter - 1].wind_speed << " mph";
-        cout << "\tDirection: " << (readings[inputCounter - 1].wind_direction == "" ? "N/A" : readings[inputCounter - 1].wind_direction) << endl;
+        cout << "\tDirection: " << (readings[inputCounter - 1].wind_direction == "" ?
+        "N/A" : readings[inputCounter - 1].wind_direction) << endl;
     }
 }
 

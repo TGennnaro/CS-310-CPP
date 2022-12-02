@@ -2,14 +2,16 @@
 #include <iostream>
 using namespace std;
 
-Circle::Circle() {
+Circle::Circle():Shape(), Object("Circle") {
     this->radius = 1;
-    this->center = Point();
 }
 
-Circle::Circle(double r, Point p) {
+Circle::Circle(double r):Shape(), Object("Circle") {
     this->radius = r;
-    this->center = p;
+}
+
+Circle::Circle(double radius, string color, Point loc):Shape(color, loc), Object("Circle") {
+    this->radius = radius;
 }
 
 void Circle::setRadius(double r) {
@@ -20,21 +22,22 @@ double Circle::getRadius() {
     return this->radius;
 }
 
-void Circle::setCenter(Point p) {
-    this->center = p;
-}
-
-Point Circle::getCenter() {
-    return this->center;
-}
-
 double Circle::getArea() {
     return 3.14 * this->radius * this->radius;
 }
 
+double Circle::getDiameter() {
+    return 2 * this->radius;
+}
+
+double Circle::getPerimeter() {
+    return 2 * 3.14 * this->radius;
+}
+
 void Circle::print() {
-    cout << "[object Circle] Radius: " << this->radius << endl;
-    center.print();
+    Object::print();
+    cout << "Radius: " << this->radius << ", ";
+    Shape::print();
 }
 
 Circle::~Circle() {
