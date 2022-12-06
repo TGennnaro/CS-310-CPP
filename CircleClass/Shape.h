@@ -21,7 +21,9 @@ class Shape {
         void move(double delX, double delY);
         void move(Point p);
 
-        void print();
+        virtual void print();
+        virtual double getArea() = 0;
+        virtual double getPerimeter() = 0;
 };
 
 #endif

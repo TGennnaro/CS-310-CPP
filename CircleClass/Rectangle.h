@@ -4,10 +4,9 @@
 #include "Shape.h"
 #include "Object.h"
 
-class Rectangle: public Shape {
+class Rectangle: public Shape, public Object {
     private:
-        double width;
-        double height;
+        double width, height;
     public:
         Rectangle();
         Rectangle(double w, double h);

@@ -36,8 +36,9 @@ double Circle::getPerimeter() {
 
 void Circle::print() {
     Object::print();
-    cout << "Radius: " << this->radius << ", ";
-    Shape::print();
+    cout << ", color: " << this->getColor() << ", center: ";
+    this->getLocation();
+    cout << "Radius: " << this->radius << ", " << endl;
 }
 
 Circle::~Circle() {
