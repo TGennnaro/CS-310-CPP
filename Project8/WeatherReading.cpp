@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "WeatherReading.h";
+#include "WeatherReading.h"
 
 WeatherReading::WeatherReading() {
     this->temperature = 0;
@@ -40,7 +40,7 @@ string WeatherReading::getWindDirection() {
 
 void WeatherReading::print() {
     cout << "Temperature: " << showpoint << fixed << setprecision(1)
-    << this->temperature << " °C" << endl;
+    << this->temperature << " C" << endl;
     cout << "Wind Speed: " << this->wind_speed << " mph";
     cout << "\tDirection: " << (this->wind_direction == "" ?
     "N/A" : this->wind_direction) << endl;
