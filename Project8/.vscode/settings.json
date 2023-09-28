@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"*.ejs": "html",
+		"*.txt": "plaintext",
+		"*.css": "tailwindcss",
+		"iomanip": "cpp",
+		"cmath": "cpp",
+		"ostream": "cpp"
+	}
+}
