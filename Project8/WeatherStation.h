@@ -16,9 +16,11 @@ class WeatherStation {
         WeatherStation(string name, int size);
         ~WeatherStation();
         void input();
+				void printSummary();
         void printHistory();
         void printRecent();
         void stop();
+				void saveReading(WeatherReading reading);
         void menu();
 };
 
